@@ -1,0 +1,8 @@
+[project]
+name = "wu-dynamics-fll-2025-asia-innovation"
+version = "0.0.0"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ruff>=0.12.7",
+]
