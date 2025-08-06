@@ -1,18 +1,5 @@
 {
-  "ruff.nativeServer": "on",
-  "terminal.integrated.profiles.windows": {
-    "Unihiker": {
-      "icon": "terminal-bash",
-      "path": "ssh",
-      "args": [
-        "root@10.1.2.3",
-      ]
-    },
-  },
-  "terminal.integrated.defaultProfile.windows": "Unihiker",
-  "editor.tabSize": 2,
-  "python.terminal.activateEnvironment": false,
-  "[python]": {
-    "editor.tabSize": 4,
-  },
+  "cSpell.words": [
+    "Meteo"
+  ]
 }
