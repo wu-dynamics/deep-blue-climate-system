@@ -1,3 +1,4 @@
 [build]
-command = "cd console && bun run build"
-publish = "console/dist"
+base = "console"
+command = "bun run build"
+publish = "dist"
