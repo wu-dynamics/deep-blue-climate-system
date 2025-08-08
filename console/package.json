@@ -1,4 +1,5 @@
 {
+  "name": "@wu-dynamics/deep-blue-console",
   "type": "module",
   "private": true,
   "scripts": {
