@@ -10,8 +10,8 @@ definePageMeta({
 const now = useNow();
 const geo = useGeolocation();
 const pos = computed(() => ({
-  latitude: geo.coords.value.accuracy ? geo.coords.value.latitude.toFixed(3) : '?',
-  longitude: geo.coords.value.accuracy ? geo.coords.value.longitude.toFixed(3) : '?',
+  latitude: geo.coords.value.accuracy && geo.coords.value.latitude.toFixed(3),
+  longitude: geo.coords.value.accuracy && geo.coords.value.longitude.toFixed(3),
 }));
 </script>
 
@@ -25,15 +25,17 @@ const pos = computed(() => ({
     <p class="text-3xl font-bold">
       深蓝气候终端
     </p>
-    <p class="text-center text-lg">
-      <span class="font-mono text-xl" v-text="now.toLocaleString()" />
-      <br>
-      纬度
-      <span class="font-mono" v-text="pos.latitude" />
-      <span class="ml-2">
-        经度
-      </span>
-      <span class="font-mono" v-text="pos.longitude" />
+
+    <p class="text-center text-lg" v-text="now.toLocaleString()" />
+
+    <p class="flex items-center text-center text-lg">
+      <span class="mr-2">纬度</span>
+      <span v-if="pos.latitude" class="font-mono" v-text="pos.latitude" />
+      <UIcon v-else name="lucide:loader-2" class="animate-spin" />
+
+      <span class="mx-2">经度</span>
+      <span v-if="pos.longitude" class="font-mono" v-text="pos.longitude" />
+      <UIcon v-else name="lucide:loader-2" class="animate-spin" />
     </p>
   </InspiraBlackHoleBackground>
 </template>

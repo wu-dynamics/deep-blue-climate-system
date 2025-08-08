@@ -41,27 +41,27 @@ const pressureStatus = computed(() => {
 
     <div class="col-span-2 grid grid-cols-2 gap-4">
       <StatCard title="气压状态" :icon="pressureStatus.icon" center>
-        <p class="text-2xl font-bold" :class="pressureStatus.color" v-text="pressureStatus.status" />
-        <p class="text-xs text-muted mt-1" v-text="formatPressure(stats.avgPressureMsl)" />
+        <p class="text-3xl font-bold" :class="pressureStatus.color" v-text="pressureStatus.status" />
+        <p class="text-sm text-muted mt-1" v-text="formatPressure(stats.avgPressureMsl)" />
       </StatCard>
 
       <StatCard title="气压波动" icon="lucide:activity" center>
-        <p class="text-2xl font-bold text-blue-500" v-text="formatVariance(stats.pressureVariance)" />
-        <p class="text-xs text-muted mt-1">
+        <p class="text-3xl font-bold text-blue-500" v-text="formatVariance(stats.pressureVariance)" />
+        <p class="text-sm text-muted mt-1">
           标准差
         </p>
       </StatCard>
 
       <StatCard title="海拔修正" icon="lucide:mountain" center>
-        <p class="text-2xl font-bold text-blue-500" v-text="formatPressure(stats.avgPressureDiff)" />
-        <p class="text-xs text-muted mt-1">
+        <p class="text-3xl font-bold text-blue-500" v-text="formatPressure(stats.avgPressureDiff)" />
+        <p class="text-sm text-muted mt-1">
           平均差值
         </p>
       </StatCard>
 
       <StatCard title="地面气压" icon="lucide:gauge" center>
-        <p class="text-2xl font-bold text-blue-500" v-text="formatPressure(stats.avgSurfacePressure)" />
-        <p class="text-xs text-muted mt-1">
+        <p class="text-3xl font-bold text-blue-500" v-text="formatPressure(stats.avgSurfacePressure)" />
+        <p class="text-sm text-muted mt-1">
           当前高度
         </p>
       </StatCard>

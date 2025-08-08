@@ -7,11 +7,14 @@ interface WindDataPoint {
   direction: number
 }
 
-defineProps<{
+withDefaults(defineProps<{
   data: WindDataPoint[]
   averageSpeed: number
   averageDirection: number
-}>();
+  directionText?: string
+}>(), {
+  directionText: '平均风向',
+});
 
 function formatDate(date: Date) {
   return format(date, 'HH:mm');
@@ -66,7 +69,7 @@ function createWindArrow(direction: number, speed: number, maxSpeed: number) {
         </div>
         <div>
           <p class="text-sm text-muted mb-1.5">
-            平均风向
+            {{ directionText }}
           </p>
           <p class="text-3xl text-highlighted font-semibold">
             {{ formatDirection(averageDirection) }}
@@ -78,7 +81,7 @@ function createWindArrow(direction: number, speed: number, maxSpeed: number) {
     <div class="relative w-full h-full flex">
       <!-- 风向罗盘 -->
       <div class="w-2/3 flex items-center justify-center">
-        <svg viewBox="50 50 140 20" class="w-full h-full">
+        <svg viewBox="50 50 140 20" class="w-full h-full scale-67">
           <!-- 罗盘圆环 -->
           <circle
             cx="120"

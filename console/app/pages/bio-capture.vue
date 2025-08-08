@@ -30,8 +30,9 @@ await k.init();
     />
 
     <WindChart
-      title="海流分析"
+      class="col-span-2"
       :data="currentData"
+      direction-text="洋流方向"
       :average-speed="averageCurrentSpeed"
       :average-direction="averageCurrentDirection"
     />

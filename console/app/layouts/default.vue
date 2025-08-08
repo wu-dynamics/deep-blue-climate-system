@@ -85,7 +85,7 @@ const groups = computed((): CommandPaletteGroup<CommandPaletteItem>[] => [{
           <template #fallback>
             <div class="flex items-center justify-center h-64">
               <div class="text-center space-y-4">
-                <UIcon name="lucide:loader-2" class="animate-spin h-12 w-12 mx-auto text-primary" />
+                <UIcon name="lucide:loader-2" class="animate-spin mx-auto text-primary" size="48" />
                 <p class="text-lg text-muted-foreground">
                   正在加载数据...
                 </p>

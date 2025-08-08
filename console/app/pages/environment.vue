@@ -61,12 +61,11 @@ await k.init();
       :template="k.templateSolar"
     />
 
-    <div class="col-span-3 grid grid-cols-2">
-      <WindChart
-        :data="windData"
-        :average-speed="k.averageWindSpeed.value"
-        :average-direction="k.averageWindDirection.value"
-      />
-    </div>
+    <WindChart
+      class="col-span-2"
+      :data="windData"
+      :average-speed="k.averageWindSpeed.value"
+      :average-direction="k.averageWindDirection.value"
+    />
   </div>
 </template>
