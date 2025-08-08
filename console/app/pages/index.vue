@@ -18,15 +18,15 @@ const pos = computed(() => ({
 <template>
   <InspiraBlackHoleBackground class="w-full h-full flex flex-col items-center justify-center gap-3">
     <div class="flex items-center">
-      <img src="~/assets/submerged.avif" class="w-20">
+      <img src="~/assets/submerged.avif?inline" class="w-20">
       <UIcon name="lucide:x" size="42" />
-      <img src="~/assets/wu-dynamics.avif" class="w-20">
+      <img src="~/assets/wu-dynamics.avif?inline" class="w-20">
     </div>
     <p class="text-3xl font-bold">
       深蓝气候终端
     </p>
 
-    <p class="text-center text-lg" v-text="now.toLocaleString()" />
+    <p class="text-center text-lg font-mono" v-text="now.toLocaleString()" />
 
     <p class="flex items-center text-center text-lg">
       <span class="mr-2">纬度</span>
