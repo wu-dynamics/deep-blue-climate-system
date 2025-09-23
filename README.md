@@ -21,3 +21,11 @@
 - 周怀之
 - 王泓博
 - 潘晨苒
+
+<div align="right">
+
+婺动力队
+
+<img src="./console/app/assets/wu-dynamics.avif" height="60" />
+
+</div>
