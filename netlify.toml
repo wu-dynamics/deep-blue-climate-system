@@ -2,6 +2,3 @@
 base = "console"
 command = "bun run build"
 publish = "dist"
-
-[build.environment]
-MISE_VERBOSE = "1"

@@ -60,6 +60,9 @@ const groups = computed((): CommandPaletteGroup<CommandPaletteItem>[] => [{
           :title="route.meta.panel.title"
         >
           <template #right>
+            <ULink class="inline-flex" href="https://github.com/wu-dynamics/deep-blue-climate-system" target="_blank">
+              <UIcon name="logos:github-icon" size="20" title="源代码" />
+            </ULink>
             <ULink href="https://www.firstlegoleague.org" target="_blank">
               <img class="h-(--ui-header-height)" src="~/assets/fll.avif" title="FIRST LEGO League">
             </ULink>
